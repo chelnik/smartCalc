@@ -14,7 +14,7 @@ void test_to_remoove(){
 
 void print_list(leksem *head) {
     leksem *p = head;
-    while (p->next != NULL) {
+    while(p) {
         // printf("\n%d", p->value);
         printf("\n%c", p->value);
         p = p->next;
@@ -42,7 +42,7 @@ leksem *create(int data) {
 
 // Голова списка - первый элемент списка; Хвост списка - все последующие
 // элементы, являющиеся, в свою очередь списком.
-leksem *add_element_start(int data, leksem *head) {
+leksem *push(int data, leksem *head) {
     // Выделение памяти под узел списка
     leksem *tmp = (leksem *)malloc(sizeof(leksem));
     // Присваивание значения узлу

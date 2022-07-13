@@ -1,0 +1,23 @@
+# ninja log v5
+0	331	1657709880000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/listFunction.c.o	273cc03ac96bf812
+2	345	1657709880000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/supportFunction.c.o	5d120d62c8b483a
+2	345	1657709880000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/validator.c.o	fea9b0b570e78891
+1	346	1657709880000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/parser.c.o	6fef7ef2ca14dd69
+1	351	1657709880000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/main.c.o	f2d84fadc1679cd
+351	403	1657709880000000000	C7_SmartCalc_v1_0_0	4605c39081158f6a
+1	424	1657709969000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/main.c.o	f2d84fadc1679cd
+424	549	1657709969000000000	C7_SmartCalc_v1_0_0	4605c39081158f6a
+8	618	1657710778000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/main.c.o	f2d84fadc1679cd
+618	717	1657710778000000000	C7_SmartCalc_v1_0_0	4605c39081158f6a
+8	525	1657711761000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/listFunction.c.o	273cc03ac96bf812
+9	525	1657711761000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/supportFunction.c.o	5d120d62c8b483a
+9	525	1657711761000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/validator.c.o	fea9b0b570e78891
+8	528	1657711761000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/main.c.o	f2d84fadc1679cd
+8	528	1657711761000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/parser.c.o	6fef7ef2ca14dd69
+528	614	1657711761000000000	C7_SmartCalc_v1_0_0	4605c39081158f6a
+7	106	1657711845000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/main.c.o	f2d84fadc1679cd
+106	179	1657711846000000000	C7_SmartCalc_v1_0_0	4605c39081158f6a
+1	543	1657712149000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/main.c.o	f2d84fadc1679cd
+543	628	1657712149000000000	C7_SmartCalc_v1_0_0	4605c39081158f6a
+2	385	1657712311000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/listFunction.c.o	273cc03ac96bf812
+385	452	1657712311000000000	C7_SmartCalc_v1_0_0	4605c39081158f6a

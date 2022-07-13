@@ -1,5 +1,6 @@
 SRC = listFunction.c supportFunction.c validator.c parser.c
-
+MAIN = templ.c
+# MAIN = main.c
 OBJ		=	$(SRC:%.c=%.o)
 
 CC 		= gcc -std=c11
@@ -11,7 +12,7 @@ all: test
 
 test:
 	@make clean
-	@gcc -g main.c $(SRC) && ./a.out
+	@gcc -g $(MAIN) $(SRC) && ./a.out
 	@make clean
 
 
