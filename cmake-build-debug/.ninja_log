@@ -31,3 +31,13 @@
 10	1000	1657816195000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/supportFunction.c.o	5d120d62c8b483a
 10	1001	1657816195000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/validator.c.o	fea9b0b570e78891
 1001	1223	1657816195000000000	C7_SmartCalc_v1_0_0	4605c39081158f6a
+2	704	1657822153000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/listFunction.c.o	273cc03ac96bf812
+2	715	1657822153000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/parser.c.o	6fef7ef2ca14dd69
+3	715	1657822153000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/supportFunction.c.o	5d120d62c8b483a
+3	716	1657822153000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/validator.c.o	fea9b0b570e78891
+2	723	1657822153000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/main.c.o	f2d84fadc1679cd
+724	813	1657822153000000000	C7_SmartCalc_v1_0_0	4605c39081158f6a
+1	1389	1657823493000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/parser.c.o	6fef7ef2ca14dd69
+1389	1506	1657823493000000000	C7_SmartCalc_v1_0_0	4605c39081158f6a
+2	550	1657824617000000000	CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/parser.c.o	6fef7ef2ca14dd69
+550	647	1657824617000000000	C7_SmartCalc_v1_0_0	4605c39081158f6a

@@ -10,13 +10,15 @@ int main() {
     leksem *head = NULL;
 
     sortstation(str, &head);
-
     
 
 
 
 
+
     print_list(head);
+    printf("\n ---------");
+    parser(str);
     remove_all(head);
     return 0;
 }
@@ -24,13 +26,13 @@ int main() {
 void sortstation(char *str, leksem **head) {
     int len = strlen(str);
     for (int i = 0; i < len; i++) {
-        creator(head, i);
+        creator(head, i, str);
     }
 }
 
 
 //  записывает лексему в связный список
-void creator(leksem **head, int i) {
+void creator(leksem **head, int i, char *str) {
     if (*head == NULL) {
         *head = create(str[i]);
     } else {
@@ -70,6 +72,9 @@ int is_sign(char symbol) {
 }
 //
 void priority_setter(leksem **head) {
+    if (is_digit((*head)->value)){
+        (*head)->priority = 1;
+    }
     switch ((*head)->value) {
         case ('('):
             (*head)->priority = 0;
@@ -118,11 +123,68 @@ void priority_setter(leksem **head) {
             (*head)->priority = 4;
             break;
         }
-        case (is_digit((*head)->value)):
-            (*head)->priority = 1;
         default:
             break;
     }
+}
+
+int priority_getter(int symbol) {
+    int exit_flag = -1;
+    if (is_digit(symbol)) {
+        exit_flag = 1;
+    }
+    switch (symbol) {
+        case ('('):
+            exit_flag = 0;
+            break;
+        case (')'):
+            exit_flag = 0;
+            break;
+        case ('x'):
+            exit_flag = 1;
+            break;
+        case ('+'):
+            exit_flag = 1;
+            break;
+        case ('-'):
+            exit_flag = 1;
+            break;
+        case ('*'):
+            exit_flag = 2;
+            break;
+        case ('/'):
+            exit_flag = 2;
+            break;
+        case ('^'):
+            exit_flag = 3;
+            break;
+        case ('m'):
+            exit_flag = 2;
+            break;
+        case ('s'): {
+            exit_flag = 4;
+            break;
+        }
+        case ('c'): {
+            exit_flag = 4;
+            break;
+        }
+        case ('t'): {
+            exit_flag = 4;
+            break;
+        }
+        case ('a'): {
+            exit_flag = 4;
+            break;
+        }
+        case ('l'): {
+            exit_flag = 4;
+            break;
+        }
+        default:
+            break;
+    }
+    return exit_flag;
 }
     // while (notempty(head)) {
     //     printf("\n%c", pop(&head));

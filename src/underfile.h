@@ -61,11 +61,13 @@ leksem *add_element_n_position(int data, int n, leksem *head);
 leksem *remove_element(int data, leksem *head);
 leksem *remove_all(leksem *head);
 void print_list(leksem *head);
+void printer(leksem *head);
 void test_to_remoove();
 
 
 void delete_space(char *str);
 void priority_setter(leksem **head);
+int priority_getter(int symbol);
 int validator(char *str);
 int bracket_cheker(char *str);
 //   -----------  Функции ожидающие продакшн
@@ -76,7 +78,7 @@ void sortstation(char *str, leksem **head);
 int is_digit(char symbol);
 int is_sign(char symbol);
 int is_bracket(char symbol);
-void creator(leksem **head, int i);
+void creator(leksem **head, int i, char *str);
 
 
 void prefixnotation();

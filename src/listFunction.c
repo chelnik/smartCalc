@@ -1,6 +1,6 @@
 #include "underfile.h"
 
-void test_to_remoove(){
+void test_to_remoove() {
     int i = 0;
     leksem *head = create(i);
     for (i = 1; i < 96; i++) {
@@ -14,10 +14,26 @@ void test_to_remoove(){
 
 void print_list(leksem *head) {
     leksem *p = head;
-    while(p) {
+    while (p) {
         // printf("\n%d", p->value);
         printf("\n%c", p->value);
         p = p->next;
+    }
+}
+// выводит список в обратном порядке
+void printer(leksem *head) {
+    leksem *p = head;
+    leksem *new_list = NULL;
+    while (p) {
+        new_list = push(p->value, new_list);
+        p = p->next;
+    }
+
+    printf("\n");
+    while (new_list) {
+        // printf("\n%d", p->value);
+        printf("%c ", new_list->value);
+        new_list = new_list->next;
     }
 }
 
@@ -28,11 +44,10 @@ void print_list(leksem *head) {
 // после чего возвращаем казательна выделенную память
 // просто работа с динамической памятью и куча и никакой магии
 
-
 /**
  * @brief создает узел
  * @return возвращает указатель на созданный
- */ 
+ */
 leksem *create(int data) {
     leksem *tmp = malloc(sizeof(leksem));
     tmp->value = data;
@@ -81,7 +96,6 @@ leksem *remove_element(int data, leksem *head) {
     }
     // Если удаляемый элемент первый
     if (tmp == head) {
-        
         free(head);
         return tmp->next;
     }
@@ -97,7 +111,7 @@ leksem *remove_element(int data, leksem *head) {
 /**
  * @brief // добавиляет элемент в любую позицию
  * нужно посылать минимум второй элемент
- */ 
+ */
 leksem *add_element_n_position(int data, int n, leksem *head) {
     leksem *p = head;
     int count = 1;
@@ -124,14 +138,12 @@ leksem *remove_all(leksem *head) {
 }
 
 int pop(leksem **head) {
-    leksem * tmp = *head;
+    leksem *tmp = *head;
     int value = tmp->value;
-    
+
     *head = tmp->next;
     free(tmp);
     return value;
 }
 
-int notempty(leksem *head) {
-    return head != NULL;
-}
+int notempty(leksem *head) { return head != NULL; }
