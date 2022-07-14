@@ -8,6 +8,7 @@ include_directories(src)
 add_executable(C7_SmartCalc_v1_0_0
         src/listFunction.c
         src/main.c
+#        src/templ.c
         src/parser.c
         src/supportFunction.c
         src/underfile.h

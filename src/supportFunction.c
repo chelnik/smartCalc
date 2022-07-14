@@ -15,17 +15,27 @@ void error_checker(int flag_error) {
  * @brief удаляет пробелы и возвращает новую строку
  * Внимание работает с кучей
  */
-char *delete_space(char *str) {
+// char *delete_space(char *str) {
+//     int len = strlen(str);
+//     char *str_result = malloc(sizeof(char) * len);
+//     for (int i = 0, k = 0; i <= len; i++) {
+//         if (str[i] != ' ') {
+//             // str_result = realloc(str_result, sizeof(char));
+//             str_result[k] = str[i];
+//             k++;
+//         }
+//     }
+//     return str_result;
+// }
+void delete_space(char *str) {
     int len = strlen(str);
-    char *str_result = malloc(sizeof(char) * len);
-    for (int i = 0, k = 0; i <= len; i++) {
+    int k = 0;
+    for (int i = 0; i <= len; i++) {
         if (str[i] != ' ') {
-            // str_result = realloc(str_result, sizeof(char));
-            str_result[k] = str[i];
-            k++;
+            str[k++] = str[i];
         }
     }
-    return str_result;
+    str[k] = '\0';
 }
 
 // заготовка под парсер

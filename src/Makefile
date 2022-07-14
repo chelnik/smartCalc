@@ -1,6 +1,6 @@
-SRC = listFunction.c supportFunction.c validator.c parser.c
-MAIN = templ.c
-# MAIN = main.c
+SRC =  listFunction.c supportFunction.c validator.c parser.c
+# MAIN = templ.c
+MAIN = main.c
 OBJ		=	$(SRC:%.c=%.o)
 
 CC 		= gcc -std=c11

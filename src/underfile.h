@@ -38,8 +38,8 @@ enum enum_type {
 // STACK
 typedef struct Node {
     int value;
-    struct Node *next;
     int priority;
+    struct Node *next;
 } leksem;
 
 
@@ -54,24 +54,31 @@ typedef struct Node {
 leksem *create(int data);
 leksem *add_element_start(int data, leksem *head);
 leksem *push(int data, leksem *head);
+int pop(leksem **head);
+int notempty(leksem *head);
+
 leksem *add_element_n_position(int data, int n, leksem *head);
-leksem *remove_element(int n, leksem *head);
 leksem *remove_element(int data, leksem *head);
+leksem *remove_all(leksem *head);
 void print_list(leksem *head);
 void test_to_remoove();
 
 
-char *delete_space(char *str);
-
+void delete_space(char *str);
+void priority_setter(leksem **head);
 int validator(char *str);
 int bracket_cheker(char *str);
 //   -----------  Функции ожидающие продакшн
 int sign_checker(char *str);
 int grammatik_checker(char *str);
 //   -----------
-void sortstation();
+void sortstation(char *str, leksem **head);
 int is_digit(char symbol);
 int is_sign(char symbol);
+int is_bracket(char symbol);
+void creator(leksem **head, int i);
+
+
 void prefixnotation();
 void postfixnotation();
 void parser(char *str);

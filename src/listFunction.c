@@ -123,16 +123,15 @@ leksem *remove_all(leksem *head) {
     return NULL;
 }
 
-// потом РАСКОМЕНЬЬТИТ И ПОПРОБОВАТЬ ЗАНОВО 
-// leksem *remove_element(int n, leksem *head) {
-//     int count = 1;
-//     leksem *p = head;
-//     while (count < n - 2 && p != NULL) {
-//         p = p->next;
-//         count++;
-//     }
-//     // штука для трех элементов
-//     // наша задача найти и встать на предыдущий перед удалением элемент
-//     p->next = p->next->next;
-//     return head;
-// }
+int pop(leksem **head) {
+    leksem * tmp = *head;
+    int value = tmp->value;
+    
+    *head = tmp->next;
+    free(tmp);
+    return value;
+}
+
+int notempty(leksem *head) {
+    return head != NULL;
+}

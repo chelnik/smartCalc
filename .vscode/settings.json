@@ -31,6 +31,7 @@
         "utility": "c",
         "string_view": "c",
         "ranges": "c",
-        "sstream": "c"
+        "sstream": "c",
+        "queue": "c"
     }
 }
