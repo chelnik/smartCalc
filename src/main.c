@@ -2,7 +2,8 @@
 
 int main() {
     // char str[255] = "(6 * 2) + 8";
-    char str[255] = "(6 * 2) + 8 + 8 * 2";
+    char str[255] =
+        "(611 * 233) + 8 + 800 * 2 + (2 + 2 * (4 * 6 * 245 - (4 + 8231))) * 1033";
     delete_space(str);
     validator(str);
 
@@ -10,11 +11,6 @@ int main() {
     leksem *head = NULL;
 
     sortstation(str, &head);
-    
-
-
-
-
 
     print_list(head);
     printf("\n ---------");
@@ -29,7 +25,6 @@ void sortstation(char *str, leksem **head) {
         creator(head, i, str);
     }
 }
-
 
 //  записывает лексему в связный список
 void creator(leksem **head, int i, char *str) {
@@ -58,6 +53,11 @@ int is_digit(char symbol) {
             exit_flag = TRUE;
         }
     }
+    // обработка точки
+    
+    if (symbol == 46) {
+        exit_flag = TRUE;
+    }
     return exit_flag;
 }
 
@@ -73,7 +73,7 @@ int is_sign(char symbol) {
 }
 
 void priority_setter(leksem **head) {
-    if (is_digit((*head)->value)){
+    if (is_digit((*head)->value)) {
         (*head)->priority = 1;
         (*head)->type = 3;
     }
@@ -203,7 +203,6 @@ int priority_getter(int symbol) {
     return exit_flag;
 }
 
-
-    // while (notempty(head)) {
-    //     printf("\n%c", pop(&head));
-    // }
+// while (notempty(head)) {
+//     printf("\n%c", pop(&head));
+// }

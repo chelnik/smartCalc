@@ -8,15 +8,15 @@ void parser(char *str) {
     for (int i = 0; i < len; i++) {
         // Число - добавляем в строку вывода.
         if (is_digit(str[i])) {
-            char *start_ptr = &str[i];
-            for (; is_digit(str[i]); i++) {}
-            char *end_ptr = &str[--i];
+           char *start_ptr = &str[i];
+           for (; is_digit(str[i]); i++) {}
+           char *end_ptr = &str[--i];
 
-            double number = strtod(start_ptr, &end_ptr);
-            output = push_double(number, output);
+           double number = strtod(start_ptr, &end_ptr);
+           output = push_double(number, output);
 
-            // output = push(str[i], output);
-            // priority_setter(&output);
+            //  output = push(str[i], output);
+            priority_setter(&output);
         }
         if (str[i] == '(') {
             stack = push(str[i], stack);
@@ -34,7 +34,8 @@ void parser(char *str) {
             do {
                 output = push(pop(&stack), output);
                 priority_setter(&output);
-            } while (stack->value != '(' && !stack);
+            } while (stack->value != '(');
+            //  && !stack убрал из скобок 
             pop(&stack);
         }
     }
@@ -82,11 +83,18 @@ int calculate(leksem **output) {
     print_list(stack);
 }
 
+void new_printer(leksem *data, leksem *head) {
+    // if (data->type == number) {
+
+    // }
+}
 leksem *push_double(double data, leksem *head) {
     // Выделение памяти под узел списка
     leksem *tmp = (leksem *)malloc(sizeof(leksem));
     // Присваивание значения узлу
-    tmp->value = data;
+    tmp->value_double = data;
+//    ВНИМАНИЕ НИЖЕ КОСТЫЛЬ
+    tmp->type = number;
     // Присваивание указателю на следующий элемент значения указателя на
     // «голову» первоначального списка
     tmp->next = head;

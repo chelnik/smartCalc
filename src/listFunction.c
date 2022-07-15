@@ -25,18 +25,31 @@ void printer(leksem *head) {
     leksem *p = head;
     leksem *new_list = NULL;
     while (p) {
-        new_list = push(p->value, new_list);
-        p = p->next;
+        if (p->type == number) {
+            new_list = push_double(p->value_double, new_list);
+            p = p->next;
+        } else {
+            new_list = push(p->value, new_list);
+            p = p->next;
+        }
+//        priority_setter(&new_list);
     }
 
     printf("\n");
     while (new_list) {
-        // printf("\n%d", p->value);
-        printf("%c ", new_list->value);
-        new_list = new_list->next;
+        if (new_list->type == number) {
+            printf("%.lf ", new_list->value_double);
+            new_list = new_list->next;
+        } else {
+            printf("%c ", new_list->value);
+            new_list = new_list->next;
+        }
     }
 }
-
+// 6 2 * 8 + 8 2 * + 2 2 4 6 * 2 * 4 8 + - * + 10 * +
+// 6 2 * 8 + 8 2 * + 2 2 4 6 * 2 * 4 8 + - * + 10 * + 
+// 611 233 * 8 + 800 2 * + 2 2 4 6 * 245 * 4 8231 + - * + 1033 * +
+// 611 233 * 8 + 800 2 * + 2 2 4 6 * 245 * 4 8231 + - * + 1033 * + 
 // то есть тут в функции мы выделяем память под структуру и получаем указатель
 // на выделенную память
 //  после чего записываем в поле значение нужное нам значение и в поле для
@@ -138,11 +151,17 @@ leksem *remove_all(leksem *head) {
 }
 
 int pop(leksem **head) {
-    leksem *tmp = *head;
-    int value = tmp->value;
+    int value = 0;
+    if (head == NULL) {
+        printf("\n error");
+    } else {
+        leksem *tmp = *head;
+        value = tmp->value;
 
-    *head = tmp->next;
-    free(tmp);
+        *head = tmp->next;
+        free(tmp);
+    }
+
     return value;
 }
 
