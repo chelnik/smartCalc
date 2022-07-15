@@ -49,3 +49,28 @@ void parser_2(char *str) {
         add_element_n_position(str[i], i + 1, head);
     }
 }
+
+leksem *reverse_stack(leksem *head) {
+    leksem *p = head;
+    leksem *new_list = NULL;
+    while (p) {
+        new_list = push(p->value, new_list);
+        p = p->next;
+    }
+
+    return new_list;
+}
+
+char* itoa(int val){
+	
+	static char buf[32] = {0};
+	
+	int i = 30;
+	
+	for(; val && i ; --i, val /= 10)
+	
+		buf[i] = "0123456789abcdef"[val % 10];
+	
+	return &buf[i+1];
+	
+}

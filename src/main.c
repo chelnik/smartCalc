@@ -1,8 +1,8 @@
 #include "underfile.h"
 
 int main() {
-    char str[255] = "(6 * 2) + 8";
-
+    // char str[255] = "(6 * 2) + 8";
+    char str[255] = "(6 * 2) + 8 + 8 * 2";
     delete_space(str);
     validator(str);
 
@@ -50,6 +50,7 @@ int is_bracket(char symbol) {
     }
     return exit_flag;
 }
+
 int is_digit(char symbol) {
     int exit_flag = FALSE;
     for (int i = 48; i <= 57; i++) {

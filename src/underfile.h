@@ -39,6 +39,7 @@ enum enum_type {
 typedef struct Node {
     int value;
     int priority;
+    int type;
     struct Node *next;
 } leksem;
 
@@ -79,11 +80,10 @@ int is_digit(char symbol);
 int is_sign(char symbol);
 int is_bracket(char symbol);
 void creator(leksem **head, int i, char *str);
+char* itoa(int val);
 
-
-void prefixnotation();
-void postfixnotation();
 void parser(char *str);
-
+int calculate(leksem **output);
+leksem *reverse_stack(leksem *head);
 // supportFunctions 
 void error_checker(int flag_error);
