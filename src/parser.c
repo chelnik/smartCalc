@@ -12,8 +12,8 @@ void parser(char *str) {
             for (; is_digit(str[i]); i++) {}
             char *end_ptr = &str[--i];
 
-            int number = strtod(start_ptr, &end_ptr);
-            output = push(number, output);
+            double number = strtod(start_ptr, &end_ptr);
+            output = push_double(number, output);
 
             // output = push(str[i], output);
             // priority_setter(&output);
@@ -47,7 +47,7 @@ void parser(char *str) {
     print_list(stack);
     printf("\n ---------- output : ----------\n");
     printer(output);
-    calculate(&output);
+    // calculate(&output);
 }
 
 int calculate(leksem **output) {
@@ -56,11 +56,11 @@ int calculate(leksem **output) {
     while (output_new) {
         int t = pop(&output_new);
         if (is_digit(t)) {
-            stack = push(t, stack);
+            stack = push_double(t, stack);
         } else {
             int c = 0;
-            int a = pop(&stack);
-            int b = pop(&stack);
+            double a = pop_double(&stack);
+            double b = pop_double(&stack);
             if (t == '+') {
                 c = a + b;
             }
@@ -82,6 +82,33 @@ int calculate(leksem **output) {
     print_list(stack);
 }
 
+leksem *push_double(double data, leksem *head) {
+    // Выделение памяти под узел списка
+    leksem *tmp = (leksem *)malloc(sizeof(leksem));
+    // Присваивание значения узлу
+    tmp->value = data;
+    // Присваивание указателю на следующий элемент значения указателя на
+    // «голову» первоначального списка
+    tmp->next = head;
+    return (tmp);
+}
+
+double pop_double(leksem **head) {
+    leksem *tmp = *head;
+    double value = tmp->value_double;
+
+    *head = tmp->next;
+    free(tmp);
+    return value;
+}
+// int pop_(leksem **head) {
+//     leksem *tmp = *head;
+//     int value = tmp->value;
+
+//     *head = tmp->next;
+//     free(tmp);
+//     return value;
+// }
 
 // atoi(strdup(itoa(pop(&stack))));
 

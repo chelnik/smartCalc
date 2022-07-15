@@ -71,57 +71,72 @@ int is_sign(char symbol) {
     }
     return exit_flag;
 }
-//
+
 void priority_setter(leksem **head) {
     if (is_digit((*head)->value)){
         (*head)->priority = 1;
+        (*head)->type = 3;
     }
     switch ((*head)->value) {
         case ('('):
             (*head)->priority = 0;
+            (*head)->type = open_bracket;
             break;
         case (')'):
             (*head)->priority = 0;
+            (*head)->type = close_bracket;
             break;
         case ('x'):
             (*head)->priority = 1;
+            (*head)->type = x;
             break;
         case ('+'):
             (*head)->priority = 1;
+            (*head)->type = add;
             break;
         case ('-'):
             (*head)->priority = 1;
+            (*head)->type = sub;
             break;
         case ('*'):
             (*head)->priority = 2;
+            (*head)->type = multiply;
             break;
         case ('/'):
             (*head)->priority = 2;
+            (*head)->type = divide;
             break;
         case ('^'):
             (*head)->priority = 3;
+            (*head)->type = e_exp;
             break;
         case ('m'):
             (*head)->priority = 2;
+            (*head)->type = e_mod;
             break;
         case ('s'): {
             (*head)->priority = 4;
+            // (*head)->type = e_asin;
             break;
         }
         case ('c'): {
             (*head)->priority = 4;
+            // (*head)->type = e_exp;
             break;
         }
         case ('t'): {
             (*head)->priority = 4;
+            // (*head)->type = e_exp;
             break;
         }
         case ('a'): {
             (*head)->priority = 4;
+            // (*head)->type = e_exp;
             break;
         }
         case ('l'): {
             (*head)->priority = 4;
+            // (*head)->type = e_exp;
             break;
         }
         default:
@@ -187,6 +202,8 @@ int priority_getter(int symbol) {
     }
     return exit_flag;
 }
+
+
     // while (notempty(head)) {
     //     printf("\n%c", pop(&head));
     // }

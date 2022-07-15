@@ -38,6 +38,7 @@ enum enum_type {
 // STACK
 typedef struct Node {
     int value;
+    double value_double;
     int priority;
     int type;
     struct Node *next;
@@ -87,3 +88,7 @@ int calculate(leksem **output);
 leksem *reverse_stack(leksem *head);
 // supportFunctions 
 void error_checker(int flag_error);
+
+
+leksem *push_double(double data, leksem *head);
+double pop_double(leksem **head);
