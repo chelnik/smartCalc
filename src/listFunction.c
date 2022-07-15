@@ -15,7 +15,6 @@ void test_to_remoove() {
 void print_list(leksem *head) {
     leksem *p = head;
     while (p) {
-        // printf("\n%d", p->value);
         printf("\n%c", p->value);
         p = p->next;
     }

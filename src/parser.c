@@ -1,6 +1,7 @@
 #include "underfile.h"
 // char str[255] = "(6 * 2) + 8 + 8 * 2 + (2 + 2)";
 // 6 2 * 8 + 8 2 * + 2 2 + +
+
 void parser(char *str) {
     int len = strlen(str);
     leksem *output = NULL;
@@ -48,6 +49,7 @@ void parser(char *str) {
     print_list(stack);
     printf("\n ---------- output : ----------\n");
     printer(output);
+    // НАЧАТЬ ДЕБАЖИТЬ ЭТУ ФУНКЦИЮ!!
     // calculate(&output);
 }
 
