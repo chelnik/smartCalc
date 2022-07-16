@@ -6,6 +6,7 @@ set(CMAKE_C_STANDARD 11)
 include_directories(src)
 
 add_executable(C7_SmartCalc_v1_0_0
+        src/priorityFunction.c
         src/listFunction.c
         src/main.c
 #        src/templ.c

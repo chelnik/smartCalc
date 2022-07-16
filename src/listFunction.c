@@ -1,16 +1,16 @@
 #include "underfile.h"
 
-void test_to_remoove() {
-    int i = 0;
-    leksem *head = create(i);
-    for (i = 1; i < 96; i++) {
-        add_element_n_position(i * 5, i, head);
-    }
-    for (int i = 10; i < 94; i++) {
-        remove_element(i, head);
-    }
-    print_list(head);
-}
+// void test_to_remoove() {
+//     int i = 0;
+//     leksem *head = create(i);
+//     for (i = 1; i < 96; i++) {
+//         add_element_n_position(i * 5, i, head);
+//     }
+//     for (int i = 10; i < 94; i++) {
+//         remove_element(i, head);
+//     }
+//     print_list(head);
+// }
 
 void print_list(leksem *head) {
     leksem *p = head;
@@ -31,7 +31,7 @@ void printer(leksem *head) {
             new_list = push(p->value, new_list);
             p = p->next;
         }
-//        priority_setter(&new_list);
+        //        priority_setter(&new_list);
     }
 
     printf("\n");
@@ -45,10 +45,7 @@ void printer(leksem *head) {
         }
     }
 }
-// 6 2 * 8 + 8 2 * + 2 2 4 6 * 2 * 4 8 + - * + 10 * +
-// 6 2 * 8 + 8 2 * + 2 2 4 6 * 2 * 4 8 + - * + 10 * + 
-// 611 233 * 8 + 800 2 * + 2 2 4 6 * 245 * 4 8231 + - * + 1033 * +
-// 611 233 * 8 + 800 2 * + 2 2 4 6 * 245 * 4 8231 + - * + 1033 * + 
+
 // то есть тут в функции мы выделяем память под структуру и получаем указатель
 // на выделенную память
 //  после чего записываем в поле значение нужное нам значение и в поле для

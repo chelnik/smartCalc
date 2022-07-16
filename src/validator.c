@@ -1,7 +1,7 @@
 #include "underfile.h"
 
 int validator(char *str) {
-    int exit_flag;
+    int exit_flag = 0;
     exit_flag += bracket_cheker(str);
     // нужно продолжить работу над этой функцией
     exit_flag += sign_checker(str);
@@ -20,6 +20,7 @@ int bracket_cheker(char *str) {
     }
 
     if (openbracket != closebracket) exit_flag = ERROR;
+    return exit_flag;
 }
 
 // Функции ожидающие продакшн

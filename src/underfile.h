@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-//  тут приоритеты операторов 
-enum Sign{
+//  тут приоритеты операторов
+enum Sign {
     MINUS = 1,
     PLUS = 1,
     DIVIDE = 2,
@@ -32,7 +32,6 @@ enum enum_type {
     e_log
 };
 
-
 //  создаем ноду
 //  называем лексемой
 // STACK
@@ -43,9 +42,6 @@ typedef struct Node {
     int type;
     struct Node *next;
 } leksem;
-
-
-
 
 #define OK 0
 #define ERROR 1
@@ -64,8 +60,7 @@ leksem *remove_element(int data, leksem *head);
 leksem *remove_all(leksem *head);
 void print_list(leksem *head);
 void printer(leksem *head);
-void test_to_remoove();
-
+// void test_to_remoove();
 
 void delete_space(char *str);
 void priority_setter(leksem **head);
@@ -76,21 +71,21 @@ int bracket_cheker(char *str);
 int sign_checker(char *str);
 int grammatik_checker(char *str);
 //   -----------
-void sortstation(char *str, leksem **head);
+
 int is_digit(char symbol);
 int is_sign(char symbol);
 int is_bracket(char symbol);
-void creator(leksem **head, int i, char *str);
-char* itoa(int val);
+int is_function(char *str, int *i);
+// void sortstation(char *str, leksem **head);
 
 void parser(char *str);
 int calculate(leksem **output);
 leksem *reverse_stack(leksem *head);
-// supportFunctions 
+// supportFunctions
 void error_checker(int flag_error);
-
 
 leksem *push_double(double data, leksem *head);
 double pop_double(leksem **head);
 int view_pop(leksem **head);
 leksem *super_push(leksem *old, leksem *head);
+int num_el_in_stack(leksem *head);

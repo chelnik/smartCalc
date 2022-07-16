@@ -1,7 +1,6 @@
 // Мелочей не бывает
 #include "underfile.h"
 
-void parser_2(char *str);
 // выводи OK либо error
 void error_checker(int flag_error) {
     if (flag_error == OK)
@@ -24,18 +23,6 @@ void delete_space(char *str) {
         }
     }
     str[k] = '\0';
-}
-
-// заготовка под парсер
-void parser_2(char *str) {
-    int exit_flag = OK;
-    int len = strlen(str);
-    int openbracket = 0, closebracket = 0;
-    leksem *head;
-    head = create(str[0]);
-    for (int i = 1; i <= len; i++) {
-        add_element_n_position(str[i], i + 1, head);
-    }
 }
 
 leksem *reverse_stack(leksem *head) {
@@ -61,16 +48,17 @@ leksem *super_push(leksem *old, leksem *head) {
     tmp->next = head;
     return (tmp);
 }
-char* itoa(int val){
+
+// char* itoa(int val){
 	
-	static char buf[32] = {0};
+// 	static char buf[32] = {0};
 	
-	int i = 30;
+// 	int i = 30;
 	
-	for(; val && i ; --i, val /= 10)
+// 	for(; val && i ; --i, val /= 10)
 	
-		buf[i] = "0123456789abcdef"[val % 10];
+// 		buf[i] = "0123456789abcdef"[val % 10];
 	
-	return &buf[i+1];
+// 	return &buf[i+1];
 	
-}
+// }

@@ -1,4 +1,4 @@
-SRC =  listFunction.c supportFunction.c validator.c parser.c
+SRC =   listFunction.c supportFunction.c validator.c parser.c priorityFunction.c
 # MAIN = templ.c
 MAIN = main.c
 OBJ		=	$(SRC:%.c=%.o)
