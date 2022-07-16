@@ -163,5 +163,15 @@ int pop(leksem **head) {
 
     return value;
 }
+int view_pop(leksem **head) {
+    int type = 0;
+    if (head == NULL) {
+        printf("\n error");
+    } else {
+        leksem *tmp = *head;
+        type = tmp->type;
+    }
 
+    return type;
+}
 int notempty(leksem *head) { return head != NULL; }

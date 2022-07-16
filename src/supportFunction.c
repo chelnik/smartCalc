@@ -12,21 +12,9 @@ void error_checker(int flag_error) {
 
 
 /**
- * @brief удаляет пробелы и возвращает новую строку
- * Внимание работает с кучей
+ * @brief удаляет пробелы в старой строке
+ * 
  */
-// char *delete_space(char *str) {
-//     int len = strlen(str);
-//     char *str_result = malloc(sizeof(char) * len);
-//     for (int i = 0, k = 0; i <= len; i++) {
-//         if (str[i] != ' ') {
-//             // str_result = realloc(str_result, sizeof(char));
-//             str_result[k] = str[i];
-//             k++;
-//         }
-//     }
-//     return str_result;
-// }
 void delete_space(char *str) {
     int len = strlen(str);
     int k = 0;
@@ -54,13 +42,25 @@ leksem *reverse_stack(leksem *head) {
     leksem *p = head;
     leksem *new_list = NULL;
     while (p) {
-        new_list = push(p->value, new_list);
+        new_list = super_push(p, new_list);
         p = p->next;
     }
 
     return new_list;
 }
-
+leksem *super_push(leksem *old, leksem *head) {
+    // Выделение памяти под узел списка
+    leksem *tmp = (leksem *)malloc(sizeof(leksem));
+    // Присваивание значения узлу
+    tmp->value = old->value;
+    tmp->value_double = old->value_double;
+    tmp->priority = old->priority;
+    tmp->type = old->type;
+    // Присваивание указателю на следующий элемент значения указателя на
+    // «голову» первоначального списка
+    tmp->next = head;
+    return (tmp);
+}
 char* itoa(int val){
 	
 	static char buf[32] = {0};

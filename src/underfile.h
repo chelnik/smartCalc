@@ -92,3 +92,5 @@ void error_checker(int flag_error);
 
 leksem *push_double(double data, leksem *head);
 double pop_double(leksem **head);
+int view_pop(leksem **head);
+leksem *super_push(leksem *old, leksem *head);

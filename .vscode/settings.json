@@ -32,6 +32,11 @@
         "string_view": "c",
         "ranges": "c",
         "sstream": "c",
-        "queue": "c"
+        "queue": "c",
+        "__functional_base_03": "c",
+        "__hash_table": "c",
+        "__tuple": "c",
+        "compare": "c",
+        "memory": "c"
     }
 }

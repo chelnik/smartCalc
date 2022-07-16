@@ -4,6 +4,10 @@ int main() {
     // char str[255] = "(6 * 2) + 8";
     char str[255] =
         "(611 * 233) + 8 + 800 * 2 + (2 + 2 * (4 * 6 * 245 - (4 + 8231))) * 1033";
+        // char str[255] =
+        // "(611 * 233) + 8 + 800 * 2 + (2 + 2 * (4 * 6 * 5 * (4 + 8231))) - 100";
+        // char str[255] =
+        // "2 - ( 4 - 1 )";
     delete_space(str);
     validator(str);
 
@@ -18,7 +22,8 @@ int main() {
     remove_all(head);
     return 0;
 }
-
+// 611 233 * 8 + 800 2 * + 2 2 4 6 * 5 * 4 8231 + - * + +
+// 611 233 * 8 + 800 2 * + 2 2 4 6 * 5 * 4 8231 + - * + +  
 void sortstation(char *str, leksem **head) {
     int len = strlen(str);
     for (int i = 0; i < len; i++) {

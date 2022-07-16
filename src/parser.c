@@ -1,6 +1,5 @@
 #include "underfile.h"
-// char str[255] = "(6 * 2) + 8 + 8 * 2 + (2 + 2)";
-// 6 2 * 8 + 8 2 * + 2 2 + +
+
 
 void parser(char *str) {
     int len = strlen(str);
@@ -50,46 +49,42 @@ void parser(char *str) {
     printf("\n ---------- output : ----------\n");
     printer(output);
     // НАЧАТЬ ДЕБАЖИТЬ ЭТУ ФУНКЦИЮ!!
-    // calculate(&output);
+     calculate(&output);
 }
 
 int calculate(leksem **output) {
     leksem *output_new = reverse_stack(*output);
     leksem *stack = NULL;
     while (output_new) {
-        int t = pop(&output_new);
-        if (is_digit(t)) {
-            stack = push_double(t, stack);
+        int typo = view_pop(&output_new);
+        if (typo == number) {
+            stack = push_double(pop_double(&output_new), stack);
         } else {
-            int c = 0;
+            pop(&output_new);
+            double c = 0;
             double a = pop_double(&stack);
             double b = pop_double(&stack);
-            if (t == '+') {
+            if (typo == add) {
                 c = a + b;
             }
 
-            else if (t == '-') {
-                c = a - b;
+            else if (typo == sub) {
+                c = b - a;
             }
 
-            else if (t == '*') {
+            else if (typo == multiply) {
                 c = a * b;
             }
 
-            else if (t == '/') {
+            else if (typo == divide) {
                 c = a / b;
             }
-            stack = push(c, stack);
+            stack = push_double(c, stack);
         }
     }
-    print_list(stack);
+    printer(stack);
 }
 
-void new_printer(leksem *data, leksem *head) {
-    // if (data->type == number) {
-
-    // }
-}
 leksem *push_double(double data, leksem *head) {
     // Выделение памяти под узел списка
     leksem *tmp = (leksem *)malloc(sizeof(leksem));
