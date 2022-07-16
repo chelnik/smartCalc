@@ -75,7 +75,7 @@ int grammatik_checker(char *str);
 int is_digit(char symbol);
 int is_sign(char symbol);
 int is_bracket(char symbol);
-int is_function(char *str, int *i);
+
 // void sortstation(char *str, leksem **head);
 
 void parser(char *str);
@@ -86,6 +86,12 @@ void error_checker(int flag_error);
 
 leksem *push_double(double data, leksem *head);
 double pop_double(leksem **head);
-int view_pop(leksem **head);
+int view_type(leksem **head);
 leksem *super_push(leksem *old, leksem *head);
 int num_el_in_stack(leksem *head);
+
+int function_handler(char *str, int *i, leksem **head);
+leksem *push_type(int type, leksem *head);
+int is_function(int type);
+char *return_name_function(int type);
+double pop_type(leksem **head);

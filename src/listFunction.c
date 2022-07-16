@@ -12,39 +12,6 @@
 //     print_list(head);
 // }
 
-void print_list(leksem *head) {
-    leksem *p = head;
-    while (p) {
-        printf("\n%c", p->value);
-        p = p->next;
-    }
-}
-// выводит список в обратном порядке
-void printer(leksem *head) {
-    leksem *p = head;
-    leksem *new_list = NULL;
-    while (p) {
-        if (p->type == number) {
-            new_list = push_double(p->value_double, new_list);
-            p = p->next;
-        } else {
-            new_list = push(p->value, new_list);
-            p = p->next;
-        }
-        //        priority_setter(&new_list);
-    }
-
-    printf("\n");
-    while (new_list) {
-        if (new_list->type == number) {
-            printf("%.lf ", new_list->value_double);
-            new_list = new_list->next;
-        } else {
-            printf("%c ", new_list->value);
-            new_list = new_list->next;
-        }
-    }
-}
 
 // то есть тут в функции мы выделяем память под структуру и получаем указатель
 // на выделенную память
@@ -160,7 +127,7 @@ int pop(leksem **head) {
 
     return value;
 }
-int view_pop(leksem **head) {
+int view_type(leksem **head) {
     int type = 0;
     if (head == NULL) {
         printf("\n error");

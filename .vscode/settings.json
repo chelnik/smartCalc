@@ -38,6 +38,7 @@
         "__tuple": "c",
         "compare": "c",
         "memory": "c",
-        "underfile.h": "c"
+        "underfile.h": "c",
+        "__locale": "c"
     }
 }

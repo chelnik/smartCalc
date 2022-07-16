@@ -7,7 +7,8 @@ int main() {
     //     1033)";
     // char str[255] =
     // "(611 * 233) + 8 + 800 * 2 + (2 + 2 * (4 * 6 * 5 * (4 + 8231))) - 100";
-    char str[255] = "-( -( - 4.4 - 1.1) ) ";
+    // char str[255] = "-( -( - 4.4 - 1.1) ) ";
+    char str[255] = "9mod2";
     delete_space(str);
     if (validator(str) == 0) {
         printf(str);

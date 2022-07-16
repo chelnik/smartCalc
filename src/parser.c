@@ -22,10 +22,9 @@ void parser(char *str) {
             stack = push(str[i], stack);
             priority_setter(&stack);
         }
-        // if (is_function(str, &i)){
-        //     // stack = push(str[i], stack);
-        //     // priority_setter(&stack);
-        // }
+        // Важный элемент для ошибок
+        function_handler(str, &i, &stack);
+
         if (is_sign(str[i])) {
             while (stack && stack->priority >= priority_getter(str[i])) {
                 output = push(pop(&stack), output);
@@ -41,44 +40,86 @@ void parser(char *str) {
             } while (stack->value != '(');
             //  && !stack убрал из скобок
             pop(&stack);
+            int typo = view_type(&stack);
+            if (is_function(typo)) {
+                output = push_type(pop_type(&stack), output);
+            }
         }
     }
     while (stack) {
-        output = push(pop(&stack), output);
-        priority_setter(&output);
+        int typo = view_type(&stack);
+        if (is_function(typo)) {
+            output = push_type(pop_type(&stack), output);
+        } else {
+            output = push(pop(&stack), output);
+            priority_setter(&output);
+        }
     }
     printer(output);
-// ВЫЗЫВАЕМ ВНУТРИ ФУНКЦИЮ КАЛЬКУЛЯЦИИ
-    calculate(&output);
+    // ВЫЗЫВАЕМ ВНУТРИ ФУНКЦИЮ КАЛЬКУЛЯЦИИ
+    // calculate(&output);
     remove_all(output);
     remove_all(stack);
 }
+int is_function(int type) {
+    int exit_flag = FALSE;
+    for (int i = e_mod; i <= e_log; i++) {
+        if (type == i) exit_flag = TRUE;
+    }
+    return exit_flag;
+}
+int function_handler(char *str, int *i, leksem **head) {
+    int exit_flag = FALSE;
+    int result = -1;
+    if (str[*i] == 'm') {
+        result = strncmp(str + *i, "mod", 3);
+        if (result == 0) {
+            *head = push_type(e_mod, *head);
+            (*i) += 2;
+        }
+    }
+    // if (str[(*i)++] == 's'){
+    //     if (str[i] == 'i') {
+    //     } else if (str[i] == 'q'){
+    //     }
+    // }
+    return exit_flag;
+}
+leksem *push_type(int type, leksem *head) {
+    // Выделение памяти под узел списка
+    leksem *tmp = (leksem *)malloc(sizeof(leksem));
+    // Присваивание значения узлу
+    tmp->type = type;
+    if (type == e_mod) {
+        tmp->priority = 2;
+    } else {
+        tmp->priority = 4;
+    }
+    // tmp->priority = priority_setter_func(type);
+    // Присваивание указателю на следующий элемент значения указателя на
+    // «голову» первоначального списка
+    tmp->next = head;
+    return (tmp);
+}
+double pop_type(leksem **head) {
+    leksem *tmp = *head;
+    double type = tmp->type;
 
-// int is_function(char *str, int *i) {
-//     int exit_flag = FALSE;
-//     if (str[*i] == m) {
-//         strncmp(str[*i],"mod", 3);
-//     }
-//     // if (str[(*i)++] == 's'){
-//     //     if (str[i] == 'i') {
-
-//     //     } else if (str[i] == 'q'){
-
-//     //     }
-//     // }
-//     return exit_flag;
-// }
-
+    *head = tmp->next;
+    free(tmp);
+    return type;
+}
 int calculate(leksem **output) {
     leksem *output_new = reverse_stack(*output);
     leksem *stack = NULL;
 
     while (output_new) {
-        int typo = view_pop(&output_new);
+        int typo = view_type(&output_new);
         if (typo == number) {
             stack = push_double(pop_double(&output_new), stack);
         } else {
             pop(&output_new);
+            // штука для обработки унарного минуса
             if (num_el_in_stack(stack) == 1) {
                 double a = pop_double(&stack);
                 if (typo == add) {

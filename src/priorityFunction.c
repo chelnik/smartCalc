@@ -13,7 +13,6 @@
 //     }
 // }
 
-
 int is_bracket(char symbol) {
     int exit_flag = FALSE;
     for (int i = 40; i <= 41; i++) {
@@ -88,35 +87,35 @@ void priority_setter(leksem **head) {
             (*head)->priority = 3;
             (*head)->type = e_exp;
             break;
-        case ('m'):
-            (*head)->priority = 2;
-            (*head)->type = e_mod;
-            break;
-        case ('s'): {
-            (*head)->priority = 4;
-            // (*head)->type = e_asin;
-            break;
-        }
-        case ('c'): {
-            (*head)->priority = 4;
-            // (*head)->type = e_exp;
-            break;
-        }
-        case ('t'): {
-            (*head)->priority = 4;
-            // (*head)->type = e_exp;
-            break;
-        }
-        case ('a'): {
-            (*head)->priority = 4;
-            // (*head)->type = e_exp;
-            break;
-        }
-        case ('l'): {
-            (*head)->priority = 4;
-            // (*head)->type = e_exp;
-            break;
-        }
+        // case ('m'):
+        //     (*head)->priority = 2;
+        //     (*head)->type = e_mod;
+        //     break;
+        // case ('s'): {
+        //     (*head)->priority = 4;
+        //     // (*head)->type = e_asin;
+        //     break;
+        // }
+        // case ('c'): {
+        //     (*head)->priority = 4;
+        //     // (*head)->type = e_exp;
+        //     break;
+        // }
+        // case ('t'): {
+        //     (*head)->priority = 4;
+        //     // (*head)->type = e_exp;
+        //     break;
+        // }
+        // case ('a'): {
+        //     (*head)->priority = 4;
+        //     // (*head)->type = e_exp;
+        //     break;
+        // }
+        // case ('l'): {
+        //     (*head)->priority = 4;
+        //     // (*head)->type = e_exp;
+        //     break;
+        // }
         default:
             break;
     }
@@ -152,29 +151,29 @@ int priority_getter(int symbol) {
         case ('^'):
             exit_flag = 3;
             break;
-        case ('m'):
-            exit_flag = 2;
-            break;
-        case ('s'): {
-            exit_flag = 4;
-            break;
-        }
-        case ('c'): {
-            exit_flag = 4;
-            break;
-        }
-        case ('t'): {
-            exit_flag = 4;
-            break;
-        }
-        case ('a'): {
-            exit_flag = 4;
-            break;
-        }
-        case ('l'): {
-            exit_flag = 4;
-            break;
-        }
+        // case ('m'):
+        //     exit_flag = 2;
+        //     break;
+        // case ('s'): {
+        //     exit_flag = 4;
+        //     break;
+        // }
+        // case ('c'): {
+        //     exit_flag = 4;
+        //     break;
+        // }
+        // case ('t'): {
+        //     exit_flag = 4;
+        //     break;
+        // }
+        // case ('a'): {
+        //     exit_flag = 4;
+        //     break;
+        // }
+        // case ('l'): {
+        //     exit_flag = 4;
+        //     break;
+        // }
         default:
             break;
     }
