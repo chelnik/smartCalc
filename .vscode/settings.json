@@ -39,6 +39,9 @@
         "compare": "c",
         "memory": "c",
         "underfile.h": "c",
-        "__locale": "c"
+        "__locale": "c",
+        "s21_math.h": "c",
+        "complex": "c",
+        "cmath": "c"
     }
 }

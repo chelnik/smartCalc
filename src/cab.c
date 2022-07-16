@@ -3,15 +3,9 @@
 #include <string.h>
 
 int main() {
-    char* str = "ddmodddmodus";
-    for (int i = 0; i < strlen(str); i++) {
-        int a = strncmp(&str[i], "mod", 3);
-        if (a == 0) {
-            i += 2;
-        }
-
-        printf("\n%d", a);
-    }
-
+    double a = 9.6;
+    double b = 2.6;
+    double c = (int)a % (int)b;
+    printf("\n%lf", c);
     return 0;
 }

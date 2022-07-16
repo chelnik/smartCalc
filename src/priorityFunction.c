@@ -40,7 +40,7 @@ int is_digit(char symbol) {
 
 int is_sign(char symbol) {
     int exit_flag = FALSE;
-    int array_sign[] = {42, 43, 45, 47};
+    int array_sign[] = {42, 43, 45, 47, 94};
     for (int *i = array_sign; i <= array_sign + 4; i++) {
         if (symbol == *i) {
             exit_flag = TRUE;

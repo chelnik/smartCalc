@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <math.h>
+#include "../math/s21_math.h"
 //  тут приоритеты операторов
 enum Sign {
     MINUS = 1,
