@@ -27,7 +27,7 @@ void printer(leksem *head) {
     printf("\n");
     while (new_list) {
         if (new_list->type == number) {
-            printf("%.lf ", new_list->value_double);
+            printf("%.9lf ", new_list->value_double);
             new_list = new_list->next;
         } else if (is_function(new_list->type)) {
             printf("%s ", return_name_function(new_list->type));
@@ -40,7 +40,7 @@ void printer(leksem *head) {
 }
 char *return_name_function(int type) {
     char *exit_flag;
-        switch (type) {
+    switch (type) {
         case e_mod:
             exit_flag = "mod";
             break;
@@ -66,6 +66,9 @@ char *return_name_function(int type) {
             break;
         case e_ln:
             exit_flag = "ln";
+            break;
+        case e_log:
+            exit_flag = "log";
             break;
         default:
             break;

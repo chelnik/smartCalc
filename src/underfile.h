@@ -79,7 +79,7 @@ int is_bracket(char symbol);
 
 // void sortstation(char *str, leksem **head);
 
-void parser(char *str);
+void parser(char *str, double x);
 int calculate(leksem **output);
 leksem *reverse_stack(leksem *head);
 // supportFunctions
@@ -96,3 +96,6 @@ leksem *push_type(int type, leksem *head);
 int is_function(int type);
 char *return_name_function(int type);
 double pop_type(leksem **head);
+
+
+void testing();

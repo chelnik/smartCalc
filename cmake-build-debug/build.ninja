@@ -72,6 +72,132 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_C7_SmartCalc_v1_0_0: phony || CMakeFiles/C7_SmartCalc_v1_0_0.dir
 
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_abs.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_abs.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_abs.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_fabs.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_fabs.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_fabs.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_sin.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_sin.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_sin.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_cos.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_cos.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_cos.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_fmod.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_fmod.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_fmod.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_tan.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_tan.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_tan.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_pow.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_pow.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_pow.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_asin.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_asin.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_asin.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_exp.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_exp.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_exp.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_acos.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_acos.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_acos.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_log.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_log.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_log.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_sqrt.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_sqrt.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_sqrt.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_ceil.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_ceil.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_ceil.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_floor.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_floor.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_floor.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_atan.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/s21_atan.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_atan.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/remove_circle.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/math/remove_circle.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/remove_circle.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/math
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/forFunc.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/src/forFunc.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/forFunc.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/src
+
+build CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/printers.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/src/printers.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
+  DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/printers.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
+  INCLUDES = -I/Users/corkiudy/C7_SmartCalc_v1.0-0/src
+  OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir/src
+
 build CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/priorityFunction.c.o: C_COMPILER__C7_SmartCalc_v1_0_0_Debug /Users/corkiudy/C7_SmartCalc_v1.0-0/src/priorityFunction.c || cmake_object_order_depends_target_C7_SmartCalc_v1_0_0
   DEP_FILE = CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/priorityFunction.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -std=gnu11
@@ -122,7 +248,7 @@ build CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/validator.c.o: C_COMPILER__C7_Smart
 #############################################
 # Link the executable C7_SmartCalc_v1_0_0
 
-build C7_SmartCalc_v1_0_0: C_EXECUTABLE_LINKER__C7_SmartCalc_v1_0_0_Debug CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/priorityFunction.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/listFunction.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/main.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/parser.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/supportFunction.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/validator.c.o
+build C7_SmartCalc_v1_0_0: C_EXECUTABLE_LINKER__C7_SmartCalc_v1_0_0_Debug CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_abs.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_fabs.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_sin.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_cos.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_fmod.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_tan.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_pow.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_asin.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_exp.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_acos.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_log.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_sqrt.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_ceil.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_floor.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/s21_atan.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/math/remove_circle.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/forFunc.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/printers.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/priorityFunction.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/listFunction.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/main.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/parser.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/supportFunction.c.o CMakeFiles/C7_SmartCalc_v1_0_0.dir/src/validator.c.o
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6
   OBJECT_DIR = CMakeFiles/C7_SmartCalc_v1_0_0.dir
   POST_BUILD = :
