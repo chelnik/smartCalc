@@ -58,6 +58,7 @@ char *return_name_function(int type) {
             break;
         case e_acos:
             exit_flag = "acos";
+             break;
         case e_atan:
             exit_flag = "atan";
             break;
@@ -75,3 +76,5 @@ char *return_name_function(int type) {
     }
     return exit_flag;
 }
+
+

@@ -9,10 +9,9 @@ void error_checker(int flag_error) {
         printf("\n error");
 }
 
-
 /**
  * @brief удаляет пробелы в старой строке
- * 
+ *
  */
 void delete_space(char *str) {
     int len = strlen(str);
@@ -48,17 +47,3 @@ leksem *super_push(leksem *old, leksem *head) {
     tmp->next = head;
     return (tmp);
 }
-
-// char* itoa(int val){
-	
-// 	static char buf[32] = {0};
-	
-// 	int i = 30;
-	
-// 	for(; val && i ; --i, val /= 10)
-	
-// 		buf[i] = "0123456789abcdef"[val % 10];
-	
-// 	return &buf[i+1];
-	
-// }

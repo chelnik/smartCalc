@@ -38,3 +38,4 @@ int grammatik_checker(char *str) {
     }
     return exit_flag;
 }
+

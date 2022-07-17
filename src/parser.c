@@ -1,6 +1,6 @@
 #include "underfile.h"
 
-void parser(char *str, double x) {
+void parser(char *str, double x, double *result) {
     int len = strlen(str);
     leksem *output = NULL;
     leksem *stack = NULL;
@@ -61,19 +61,17 @@ void parser(char *str, double x) {
             priority_setter(&output);
         }
     }
-    printer(output);
+    // printer(output);
     // ВЫЗЫВАЕМ ВНУТРИ ФУНКЦИЮ КАЛЬКУЛЯЦИИ
-    calculate(&output);
+    calculate(&output, result);
     remove_all(output);
     remove_all(stack);
 }
 
-int calculate(leksem **output) {
+int calculate(leksem **output, double *result) {
     leksem *output_new = reverse_stack(*output);
     leksem *stack = NULL;
-    long double (*array[8])(double) = {&s21_sin,  &s21_cos,  &s21_tan,
-                                       &s21_asin, &s21_acos, &s21_atan,
-                                       &s21_sqrt};
+    double (*array[8])(double) = {&sin, &cos, &tan, &asin, &acos, &atan, &sqrt};
     while (output_new) {
         int typo = view_type(&output_new);
         if (typo == number) {
@@ -82,13 +80,13 @@ int calculate(leksem **output) {
             pop(&output_new);
             double a = pop_double(&stack);
             // штука для обработки унарного минуса
-            if (num_el_in_stack(stack) == 1) {
-                if (typo == add) {
-                    stack = push_double(a * 1., stack);
-                } else if (typo == sub) {
-                    stack = push_double(a * -1., stack);
-                }
-            }
+            // if (num_el_in_stack(stack) == 1) {
+            //     if (typo == add) {
+            //         stack = push_double(a * 1., stack);
+            //     } else if (typo == sub) {
+            //         stack = push_double(a * -1., stack);
+            //     }
+            // }
 
             for (int i = e_sin; i <= e_sqrt; i++) {
                 if (typo == i) {
@@ -102,90 +100,49 @@ int calculate(leksem **output) {
                 stack = push_double(c, stack);
             }
             if (typo == e_log) {
-                double c = s21_log(a);
+                double c = log(a);
                 stack = push_double(c, stack);
             }
 
             if (typo >= 4 && typo <= 9) {
                 double c = 0;
-
-                double b = pop_double(&stack);
+                double b;
+                if (stack)
+                b = pop_double(&stack);
                 if (typo == add) {
                     c = a + b;
-                }
-
-                else if (typo == sub) {
+                } else if (typo == sub) {
                     c = b - a;
-                }
-
-                else if (typo == multiply) {
+                } else if (typo == multiply) {
                     c = a * b;
-                }
-
-                else if (typo == divide) {
+                } else if (typo == divide) {
                     c = b / a;
                 } else if (typo == e_mod) {
-                    c = s21_fmod(b, a);
+                    c = fmod(b, a);
                 } else if (typo == e_exp) {
-                    c = s21_pow(b, a);
+                    c = pow(b, a);
                 }
                 stack = push_double(c, stack);
             }
         }
     }
-    // выводит результат
-    printer(stack);
+
+    *result = pop_double(&stack);
+    if (stack)
     remove_all(stack);
+    if (output_new)
     remove_all(output_new);
+    return 0;
 }
+double pop_double_for_parser(leksem *head) {
+    leksem *tmp = head;
+    double value = head->value_double;
 
-int num_el_in_stack(leksem *head) {
-    int count = 0;
-    leksem *p = head;
-    while (p) {
-        p = p->next;
-        count++;
-    }
-    return count;
-}
-leksem *push_double(double data, leksem *head) {
-    // Выделение памяти под узел списка
-    leksem *tmp = (leksem *)malloc(sizeof(leksem));
-    // Присваивание значения узлу
-    tmp->value_double = data;
-    tmp->type = number;
-    // Присваивание указателю на следующий элемент значения указателя на
-    // «голову» первоначального списка
-    tmp->next = head;
-    return (tmp);
-}
-
-double pop_double(leksem **head) {
-    leksem *tmp = *head;
-    double value = tmp->value_double;
-
-    *head = tmp->next;
+    head = head->next;
     free(tmp);
     return value;
 }
 
-// for (int i = MINUS; i <= MULTIPLE; i++) {
-//     printf("\n%d", i);
-// }
 
-// if (typo == e_sin) {
-//     double c = s21_sin(a);
-//     stack = push_double(c, stack);
-// } else if (typo == e_cos) {
-//     double c = s21_cos(a);
-//     stack = push_double(c, stack);
-// } else if (typo == e_tan) {
-//     double c = s21_tan(a);
-//     stack = push_double(c, stack);
-// } else if (typo == e_asin) {
-//     double c = s21_asin(a);
-//     stack = push_double(c, stack);
-// } else if (typo == e_asin) {
-//     double c = s21_asin(a);
-//     stack = push_double(c, stack);
-// }
+
+

@@ -139,3 +139,33 @@ int view_type(leksem **head) {
     return type;
 }
 int notempty(leksem *head) { return head != NULL; }
+
+int num_el_in_stack(leksem *head) {
+    int count = 0;
+    leksem *p = head;
+    while (p) {
+        p = p->next;
+        count++;
+    }
+    return count;
+}
+leksem *push_double(double data, leksem *head) {
+    // Выделение памяти под узел списка
+    leksem *tmp = (leksem *)malloc(sizeof(leksem));
+    // Присваивание значения узлу
+    tmp->value_double = data;
+    tmp->type = number;
+    // Присваивание указателю на следующий элемент значения указателя на
+    // «голову» первоначального списка
+    tmp->next = head;
+    return (tmp);
+}
+
+double pop_double(leksem **head) {
+    leksem *tmp = *head;
+    double value = (*head)->value_double;
+
+    *head = (*head)->next;
+    free(tmp);
+    return value;
+}

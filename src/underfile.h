@@ -1,9 +1,11 @@
-// Тут нет магии...
+#ifndef SRC_UNDERFILE_H_
+#define SRC_UNDERFILE_H_
+//  Тут нет магии...
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
-#include "../math/s21_math.h"
+//  #include "../math/s21_math.h"
 //  тут приоритеты операторов
 enum Sign {
     MINUS = 1,
@@ -79,8 +81,11 @@ int is_bracket(char symbol);
 
 // void sortstation(char *str, leksem **head);
 
-void parser(char *str, double x);
-int calculate(leksem **output);
+//----------------------------------------------------------------
+void parser(char *str, double x, double *result);
+int calculate(leksem **output, double *result);
+//----------------------------------------------------------------
+
 leksem *reverse_stack(leksem *head);
 // supportFunctions
 void error_checker(int flag_error);
@@ -96,6 +101,7 @@ leksem *push_type(int type, leksem *head);
 int is_function(int type);
 char *return_name_function(int type);
 double pop_type(leksem **head);
+double pop_double_for_parser(leksem *head);
+// void testing();
 
-
-void testing();
+#endif  // SRC_UNDERFILE_H_

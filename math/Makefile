@@ -24,8 +24,8 @@ $(NAME_LIB): $(OBJ_MATH) $(HEADER)
 %.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-# clean:
-# 	@rm -rf *.o *.so *.gcda *.gcno *.gch rep.info *.html *.css report *.txt *.info *.dSYM *.out
+clean:
+	@rm -rf *.o *.so *.gcda *.gcno *.gch rep.info *.html *.css report *.txt *.info *.dSYM *.out
 
 fclean: clean
 	@rm -f $(NAME_LIB)

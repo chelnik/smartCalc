@@ -179,7 +179,3 @@ int priority_getter(int symbol) {
     }
     return exit_flag;
 }
-
-// while (notempty(head)) {
-//     printf("\n%c", pop(&head));
-// }
