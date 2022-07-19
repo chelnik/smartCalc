@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Credit</class>
+ <widget class="QWidget" name="Credit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>844</width>
+    <height>749</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="pushButton_back">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+ background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+}
+
+QPushButton:hover {
+ background-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+}
+QPushButton:pressed {
+ background-color: #04f8c2;
+}
+QPushButton {
+ border: solid;
+ border-top-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-bottom-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-left-color: #00FF7F;
+ border-right-color: #00CED1;
+ border-width: 0.5px;
+ border-radius: 5px;
+ font: bold 12px;
+}</string>
+   </property>
+   <property name="text">
+    <string>back</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_persent">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>160</y>
+     <width>181</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+ background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+}
+
+QPushButton:hover {
+ background-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+}
+QPushButton:pressed {
+ background-color: #04f8c2;
+}
+QPushButton {
+ border: solid;
+ border-top-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-bottom-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-left-color: #00FF7F;
+ border-right-color: #00CED1;
+ border-width: 0.5px;
+ border-radius: 5px;
+ font: bold 12px;
+}</string>
+   </property>
+   <property name="text">
+    <string>10</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_dif">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>250</y>
+     <width>181</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+ background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+}
+
+QPushButton:hover {
+ background-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+}
+QPushButton:pressed {
+ background-color: #04f8c2;
+}
+QPushButton {
+ border: solid;
+ border-top-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-bottom-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-left-color: #00FF7F;
+ border-right-color: #00CED1;
+ border-width: 0.5px;
+ border-radius: 5px;
+ font: bold 12px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Дифференцированные</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="pushButton_anuient">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>220</y>
+     <width>181</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+ background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+}
+
+QPushButton:hover {
+ background-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+}
+QPushButton:pressed {
+ background-color: #04f8c2;
+}
+QPushButton {
+ border: solid;
+ border-top-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-bottom-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-left-color: #00FF7F;
+ border-right-color: #00CED1;
+ border-width: 0.5px;
+ border-radius: 5px;
+ font: bold 12px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Аннуитетные</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>120</y>
+     <width>231</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="toolTipDuration">
+    <number>1</number>
+   </property>
+   <property name="text">
+    <string>Срок кредита</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>160</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="toolTipDuration">
+    <number>1</number>
+   </property>
+   <property name="text">
+    <string>Процентная ставка</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>210</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="toolTipDuration">
+    <number>1</number>
+   </property>
+   <property name="text">
+    <string>Тип ежемесячных платежей</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>70</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="toolTipDuration">
+    <number>1</number>
+   </property>
+   <property name="text">
+    <string>Сумма кредита</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_time_of_credit">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>110</y>
+     <width>181</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_sum_credit">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>70</y>
+     <width>181</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1000000</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>410</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="toolTipDuration">
+    <number>1</number>
+   </property>
+   <property name="text">
+    <string>Ежемесячный платеж</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>460</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="toolTipDuration">
+    <number>1</number>
+   </property>
+   <property name="text">
+    <string>Начисленные проценты</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>510</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="toolTipDuration">
+    <number>1</number>
+   </property>
+   <property name="text">
+    <string>Долг + проценты</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_accruedpersent">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>460</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="toolTipDuration">
+    <number>1</number>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_monthlypay">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>410</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="toolTipDuration">
+    <number>1</number>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_creditandpersent">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>510</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="toolTipDuration">
+    <number>1</number>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>320</y>
+     <width>171</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+ background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+}
+
+QPushButton:hover {
+ background-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+}
+QPushButton:pressed {
+ background-color: #04f8c2;
+}
+QPushButton {
+ border: solid;
+ border-top-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-bottom-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-left-color: #00FF7F;
+ border-right-color: #00CED1;
+ border-width: 0.5px;
+ border-radius: 5px;
+ font: bold 12px;
+}</string>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

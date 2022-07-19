@@ -33,7 +33,19 @@ tests:
 	@./tests.out
 
 clean:
-	@rm -rf *.o *.so *.gcda *.gcno *.gch rep.info *.html *.css report *.txt *.info *.dSYM *.out
+	rm -rf *.{a,o,dSYM,out}
+	rm -rf $(EXECUTABLE)
+	rm -rf gcov_report
+	rm -rf report
+	rm -rf CPPLINT.cfg
+	rm -rf *.gcda
+	rm -rf *.gcno
+	rm -rf *.info
+	rm -rf test
+	rm -rf Archive_SmartCalc_v1.0 
+	rm -rf *tgz
+	rm -rf build
+	rm -rf gcov_test
 
 check: $(NAME)
 	@echo ---------------------CPPCHECK---------------------
@@ -59,7 +71,23 @@ gcov_report:
 	rm $(REPORT)
 	rm -rf *.dSYM
 
-# test:
+install:
+	make clean
+	mkdir ../build
+	cd ../SmartCalc && qmake && make
+install:
+	make clean
+	mkdir build
+	cd ../SmartCalc && qmake && make && make clean && rm Makefile && cd ../ && mv SmartCalc/SmartCalc.app build
+	cd ../build/Contents/MacOS && open smartCalc
+
+open:
+	cd ../build/Contents/MacOS && open smartCalc
+
+uninstall:
+	rm -rf ../build*
+	
+# test: 
 # 	@make clean
 # 	@gcc -g $(CFLAGS) $(MAIN) $(SRC) && ./a.out
 # 	@make clean

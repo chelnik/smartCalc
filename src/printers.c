@@ -39,7 +39,7 @@ void printer(leksem *head) {
     }
 }
 char *return_name_function(int type) {
-    char *exit_flag;
+    char *exit_flag = NULL;
     switch (type) {
         case e_mod:
             exit_flag = "mod";

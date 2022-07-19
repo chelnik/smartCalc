@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>938</width>
+    <height>865</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="3">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>max X</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="pushButton_max_size">
+      <property name="text">
+       <string>Max size</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="3">
+     <widget class="QPushButton" name="pushButton_tan">
+      <property name="text">
+       <string>tan</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QPushButton" name="pushButton_x">
+      <property name="text">
+       <string>x</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="4">
+     <widget class="QPushButton" name="pushButton_1">
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="5">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QPushButton" name="pushButton_pow">
+      <property name="text">
+       <string>^</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
+ background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+}
+
+QPushButton:hover {
+ background-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+}
+QPushButton:pressed {
+ background-color: #04f8c2;
+}
+QPushButton {
+ border: solid;
+ border-top-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-bottom-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-left-color: #00FF7F;
+ border-right-color: #00CED1;
+ border-width: 0.5px;
+ border-radius: 5px;
+ font: bold 12px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Пример 1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="pushButton_11">
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
+ background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+}
+
+QPushButton:hover {
+ background-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+}
+QPushButton:pressed {
+ background-color: #04f8c2;
+}
+QPushButton {
+ border: solid;
+ border-top-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-bottom-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-left-color: #00FF7F;
+ border-right-color: #00CED1;
+ border-width: 0.5px;
+ border-radius: 5px;
+ font: bold 12px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Пример 2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="2">
+     <widget class="QPushButton" name="pushButton_atan">
+      <property name="text">
+       <string>atan</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>mix X</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="2">
+     <widget class="QPushButton" name="pushButton_asin">
+      <property name="text">
+       <string>asin</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="6">
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Значение X:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="2">
+     <widget class="QPushButton" name="pushButton_acos">
+      <property name="text">
+       <string>acos</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="6">
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QPushButton" name="pushButton_deposit">
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
+ background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+}
+
+QPushButton:hover {
+ background-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+}
+QPushButton:pressed {
+ background-color: #04f8c2;
+}
+QPushButton {
+ border: solid;
+ border-top-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-bottom-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-left-color: #00FF7F;
+ border-right-color: #00CED1;
+ border-width: 0.5px;
+ border-radius: 5px;
+ font: bold 12px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Deposit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="5">
+     <widget class="QPushButton" name="pushButton_close_bracket">
+      <property name="text">
+       <string>)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QPushButton" name="pushButton_sqrt">
+      <property name="text">
+       <string>sqrt</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="3">
+     <widget class="QPushButton" name="pushButton_cos">
+      <property name="text">
+       <string>cos</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="pushButton_graph">
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
+ background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+}
+
+QPushButton:hover {
+ background-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+}
+QPushButton:pressed {
+ background-color: #04f8c2;
+}
+QPushButton {
+ border: solid;
+ border-top-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-bottom-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-left-color: #00FF7F;
+ border-right-color: #00CED1;
+ border-width: 0.5px;
+ border-radius: 5px;
+ font: bold 12px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Graph</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QLineEdit" name="lineEdit_maxx">
+      <property name="text">
+       <string>10</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="3">
+     <widget class="QPushButton" name="pushButton_log">
+      <property name="text">
+       <string>log</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="6">
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="4">
+     <widget class="QPushButton" name="pushButton_open_bracket">
+      <property name="text">
+       <string>(</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="pushButton_normal_size">
+      <property name="text">
+       <string>Normal size</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLineEdit" name="lineEdit_minx">
+      <property name="text">
+       <string>-10</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="4">
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="3">
+     <widget class="QPushButton" name="pushButton_sin">
+      <property name="text">
+       <string>sin</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="5">
+     <widget class="QPushButton" name="pushButton_dot">
+      <property name="styleSheet">
+       <string notr="true">
+
+QPushButton:pressed {
+
+background-color: #785964;
+
+
+}
+</string>
+      </property>
+      <property name="text">
+       <string>.</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="7">
+     <widget class="QPushButton" name="pushButton_multiple">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+  background-color: rgb(255, 151, 57);
+  color: white; 
+  border: 1px solid gray;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}</string>
+      </property>
+      <property name="text">
+       <string>×</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="7">
+     <widget class="QPushButton" name="pushButton_AC">
+      <property name="styleSheet">
+       <string notr="true">
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);
+}</string>
+      </property>
+      <property name="text">
+       <string>AC</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="7">
+     <widget class="QPushButton" name="pushButton_sum">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+  background-color: rgb(255, 151, 57);
+  color: white; 
+  border: 1px solid gray;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}</string>
+      </property>
+      <property name="text">
+       <string>+</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLineEdit" name="lineEdit_forx"/>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="pushButton_change_sign">
+      <property name="styleSheet">
+       <string notr="true">
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);
+}</string>
+      </property>
+      <property name="text">
+       <string>+/-</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="3">
+     <widget class="QPushButton" name="pushButton_credit">
+      <property name="styleSheet">
+       <string notr="true">QGroupBox {
+ background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+}
+
+QPushButton:hover {
+ background-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+}
+QPushButton:pressed {
+ background-color: #04f8c2;
+}
+QPushButton {
+ border: solid;
+ border-top-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-bottom-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-left-color: #00FF7F;
+ border-right-color: #00CED1;
+ border-width: 0.5px;
+ border-radius: 5px;
+ font: bold 12px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Credit</string>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="5">
+     <widget class="QLineEdit" name="lineEdit_maxy">
+      <property name="text">
+       <string>10</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="8">
+     <widget class="QLineEdit" name="result_show"/>
+    </item>
+    <item row="2" column="7">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="5" column="5">
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="7">
+     <widget class="QCustomPlot" name="widget" native="true"/>
+    </item>
+    <item row="8" column="7">
+     <widget class="QPushButton" name="pushButton_sub">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+  background-color: rgb(255, 151, 57);
+  color: white; 
+  border: 1px solid gray;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}</string>
+      </property>
+      <property name="text">
+       <string>-</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="6">
+     <widget class="QPushButton" name="pushButton_persent">
+      <property name="styleSheet">
+       <string notr="true">
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #BEBEBE, stop: 1 #D7D7D7);
+}</string>
+      </property>
+      <property name="text">
+       <string>%</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>max Y</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="6">
+     <widget class="QPushButton" name="pushButton_equal">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+  background-color: rgb(255, 151, 57);
+  color: white; 
+  border: 1px solid gray;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}</string>
+      </property>
+      <property name="text">
+       <string>=</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="4">
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>min Y</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="4">
+     <widget class="QPushButton" name="pushButton_0">
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4">
+     <widget class="QLineEdit" name="lineEdit_miny">
+      <property name="text">
+       <string>-10</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="7">
+     <widget class="QPushButton" name="pushButton_div">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+  background-color: rgb(255, 151, 57);
+  color: white; 
+  border: 1px solid gray;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #FF7832, stop: 1 #FF9739);
+}</string>
+      </property>
+      <property name="text">
+       <string>÷</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="5">
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="2">
+     <widget class="QPushButton" name="pushButton_ln">
+      <property name="text">
+       <string>ln</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_max_size</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showFullScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>406</x>
+     <y>297</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>530</x>
+     <y>350</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_normal_size</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showNormal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>485</x>
+     <y>380</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>509</x>
+     <y>475</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

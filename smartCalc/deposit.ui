@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Deposit</class>
+ <widget class="QWidget" name="Deposit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>928</width>
+    <height>804</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+ background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+}
+
+QPushButton:hover {
+ background-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+}
+QPushButton:pressed {
+ background-color: #04f8c2;
+}
+QPushButton {
+ border: solid;
+ border-top-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-bottom-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-left-color: #00FF7F;
+ border-right-color: #00CED1;
+ border-width: 0.5px;
+ border-radius: 5px;
+ font: bold 12px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Назад</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_sum_invest">
+   <property name="geometry">
+    <rect>
+     <x>552</x>
+     <y>230</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1000000</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_placement_period">
+   <property name="geometry">
+    <rect>
+     <x>552</x>
+     <y>270</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_percent">
+   <property name="geometry">
+    <rect>
+     <x>552</x>
+     <y>320</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>15</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>500</y>
+     <width>141</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+ background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));
+}
+
+QPushButton:hover {
+ background-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+}
+QPushButton:pressed {
+ background-color: #04f8c2;
+}
+QPushButton {
+ border: solid;
+ border-top-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-bottom-color: qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 #00CED1, stop:1 #00FF7F);
+ border-left-color: #00FF7F;
+ border-right-color: #00CED1;
+ border-width: 0.5px;
+ border-radius: 5px;
+ font: bold 12px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Рассчитать</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>320</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Процентная ставка</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>270</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Срок размещения   (лет)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>230</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Сумма вклада  (Рубли)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>360</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Налоговая ставка</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>400</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Периодичность выплат</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_nalog">
+   <property name="geometry">
+    <rect>
+     <x>552</x>
+     <y>360</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_periodichnost_viplat">
+   <property name="geometry">
+    <rect>
+     <x>552</x>
+     <y>400</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_kapitolization_persent">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>440</y>
+     <width>241</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Капитализация процентов</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_sum_k_konzu_sroka_2">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>680</y>
+     <width>371</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));</string>
+   </property>
+   <property name="text">
+    <string>Сумма на вкладе к концу срока</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_sum_nalog_2">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>640</y>
+     <width>371</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));</string>
+   </property>
+   <property name="text">
+    <string>Сумма налога</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_nachislennie_persent">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>600</y>
+     <width>371</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:  qlineargradient(x1:1, y1:1, x2:0, y2:1, stop:0 rgba(35, 21, 62, 100), stop:1  rgba(35, 21, 62, 50));</string>
+   </property>
+   <property name="text">
+    <string>Начисленные проценты</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
