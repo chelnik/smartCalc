@@ -13,15 +13,7 @@
 //     }
 // }
 
-int is_bracket(char symbol) {
-    int exit_flag = FALSE;
-    for (int i = 40; i <= 41; i++) {
-        if (symbol == i) {
-            exit_flag = TRUE;
-        }
-    }
-    return exit_flag;
-}
+
 
 int is_digit(char symbol) {
     int exit_flag = FALSE;

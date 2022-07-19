@@ -82,7 +82,7 @@ int is_bracket(char symbol);
 // void sortstation(char *str, leksem **head);
 
 //----------------------------------------------------------------
-void parser(char *str, double x, double *result);
+int parser(char *str, double x, double *result);
 int calculate(leksem **output, double *result);
 //----------------------------------------------------------------
 
@@ -103,5 +103,6 @@ char *return_name_function(int type);
 double pop_type(leksem **head);
 double pop_double_for_parser(leksem *head);
 // void testing();
+int divide_by_zero_checker(leksem **output);
 
 #endif  // SRC_UNDERFILE_H_

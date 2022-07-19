@@ -1,6 +1,8 @@
 #include "underfile.h"
 
-void parser(char *str, double x, double *result) {
+int parser(char *str, double x, double *result) {
+    int exit_flag = OK;
+    delete_space(str);
     int len = strlen(str);
     leksem *output = NULL;
     leksem *stack = NULL;
@@ -9,8 +11,7 @@ void parser(char *str, double x, double *result) {
         if (str[i] == 'x') {
             output = push_double(x, output);
             priority_setter(&output);
-        }
-        if (is_digit(str[i])) {
+        } else if (is_digit(str[i])) {
             char *start_ptr = &str[i];
             for (; is_digit(str[i]); i++) {
             }
@@ -20,23 +21,19 @@ void parser(char *str, double x, double *result) {
 
             output = push_double(number, output);
             priority_setter(&output);
-        }
-        if (str[i] == '(') {
+        } else if (str[i] == '(') {
             stack = push(str[i], stack);
             priority_setter(&stack);
-        }
-        // Важный элемент для ошибок
-        function_handler(str, &i, &stack);
-
-        if (is_sign(str[i])) {
+        } else if(function_handler(str, &i, &stack)){
+            exit_flag = OK;
+        } else if (is_sign(str[i])) {
             while (stack && stack->priority >= priority_getter(str[i])) {
                 output = push(pop(&stack), output);
                 priority_setter(&output);
             }
             stack = push(str[i], stack);
             priority_setter(&stack);
-        }
-        if (str[i] == ')') {
+        } else if (str[i] == ')') {
             // убрал do
             while (stack->value != '(') {
                 output = push(pop(&stack), output);
@@ -50,6 +47,8 @@ void parser(char *str, double x, double *result) {
                     output = push_type(pop_type(&stack), output);
                 }
             }
+        } else {
+            exit_flag = ERROR;
         }
     }
     while (stack) {
@@ -63,9 +62,30 @@ void parser(char *str, double x, double *result) {
     }
     // printer(output);
     // ВЫЗЫВАЕМ ВНУТРИ ФУНКЦИЮ КАЛЬКУЛЯЦИИ
-    calculate(&output, result);
+    if (!divide_by_zero_checker(&output) && exit_flag == OK) {
+        calculate(&output, result);
+    } else {
+        exit_flag = ERROR;
+    }
+
     remove_all(output);
     remove_all(stack);
+    return exit_flag;
+}
+
+int divide_by_zero_checker(leksem **output) {
+    int exit_flag = OK;
+    leksem *p = reverse_stack(*output);
+    // printer(p);
+    while (p) {
+        if (p->type == 3 && p->value_double == 0.0) {
+            leksem *new_p = p;
+            new_p = new_p->next;
+            if (new_p->type == 7) exit_flag = ERROR;
+        }
+        p = p->next;
+    }
+    return exit_flag;
 }
 
 int calculate(leksem **output, double *result) {
@@ -107,8 +127,7 @@ int calculate(leksem **output, double *result) {
             if (typo >= 4 && typo <= 9) {
                 double c = 0;
                 double b;
-                if (stack)
-                b = pop_double(&stack);
+                if (stack) b = pop_double(&stack);
                 if (typo == add) {
                     c = a + b;
                 } else if (typo == sub) {
@@ -128,10 +147,8 @@ int calculate(leksem **output, double *result) {
     }
 
     *result = pop_double(&stack);
-    if (stack)
-    remove_all(stack);
-    if (output_new)
-    remove_all(output_new);
+    if (stack) remove_all(stack);
+    if (output_new) remove_all(output_new);
     return 0;
 }
 double pop_double_for_parser(leksem *head) {
@@ -142,7 +159,3 @@ double pop_double_for_parser(leksem *head) {
     free(tmp);
     return value;
 }
-
-
-
-

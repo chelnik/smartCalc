@@ -1,13 +1,7 @@
 // Мелочей не бывает
 #include "underfile.h"
 
-// выводи OK либо error
-void error_checker(int flag_error) {
-    if (flag_error == OK)
-        printf("\n OK");
-    else
-        printf("\n error");
-}
+
 
 /**
  * @brief удаляет пробелы в старой строке

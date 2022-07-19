@@ -78,3 +78,21 @@ char *return_name_function(int type) {
 }
 
 
+
+// выводи OK либо error
+void error_checker(int flag_error) {
+    if (flag_error == OK)
+        printf("\n OK");
+    else
+        printf("\n error");
+}
+
+int is_bracket(char symbol) {
+    int exit_flag = FALSE;
+    for (int i = 40; i <= 41; i++) {
+        if (symbol == i) {
+            exit_flag = TRUE;
+        }
+    }
+    return exit_flag;
+}

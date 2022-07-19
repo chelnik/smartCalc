@@ -15,6 +15,7 @@ int function_handler(char *str, int *i, leksem **head) {
         if (result == 0) {
             *head = push_type(e_mod, *head);
             (*i) += 2;
+            exit_flag = TRUE;
         }
     }
     if (strncmp(str + *i, "sin", 3) == 0) {
@@ -22,6 +23,7 @@ int function_handler(char *str, int *i, leksem **head) {
         if (result == 0) {
             *head = push_type(e_sin, *head);
             (*i) += 2;
+            exit_flag = TRUE;
         }
     }
     if (strncmp(str + *i, "cos", 3) == 0) {
@@ -29,6 +31,7 @@ int function_handler(char *str, int *i, leksem **head) {
         if (result == 0) {
             *head = push_type(e_cos, *head);
             (*i) += 2;
+            exit_flag = TRUE;
         }
     }
     if (strncmp(str + *i, "tan", 3) == 0) {
@@ -36,6 +39,7 @@ int function_handler(char *str, int *i, leksem **head) {
         if (result == 0) {
             *head = push_type(e_tan, *head);
             (*i) += 2;
+            exit_flag = TRUE;
         }
     }
     if (strncmp(str + *i, "asin", 4) == 0) {
@@ -43,6 +47,7 @@ int function_handler(char *str, int *i, leksem **head) {
         if (result == 0) {
             *head = push_type(e_asin, *head);
             (*i) += 3;
+            exit_flag = TRUE;
         }
     }
     if (strncmp(str + *i, "acos", 4) == 0) {
@@ -50,6 +55,7 @@ int function_handler(char *str, int *i, leksem **head) {
         if (result == 0) {
             *head = push_type(e_acos, *head);
             (*i) += 3;
+            exit_flag = TRUE;
         }
     }
     if (strncmp(str + *i, "atan", 4) == 0) {
@@ -57,6 +63,7 @@ int function_handler(char *str, int *i, leksem **head) {
         if (result == 0) {
             *head = push_type(e_atan, *head);
             (*i) += 3;
+            exit_flag = TRUE;
         }
     }
     if (strncmp(str + *i, "sqrt", 4) == 0) {
@@ -64,6 +71,7 @@ int function_handler(char *str, int *i, leksem **head) {
         if (result == 0) {
             *head = push_type(e_sqrt, *head);
             (*i) += 3;
+            exit_flag = TRUE;
         }
     }
     if (strncmp(str + *i, "ln", 2) == 0) {
@@ -71,6 +79,7 @@ int function_handler(char *str, int *i, leksem **head) {
         if (result == 0) {
             *head = push_type(e_ln, *head);
             (*i) += 1;
+            exit_flag = TRUE;
         }
     }
     if (strncmp(str + *i, "log", 3) == 0) {
@@ -78,6 +87,7 @@ int function_handler(char *str, int *i, leksem **head) {
         if (result == 0) {
             *head = push_type(e_log, *head);
             (*i) += 2;
+            exit_flag = TRUE;
         }
     }
     return exit_flag;
