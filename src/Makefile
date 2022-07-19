@@ -86,7 +86,23 @@ open:
 
 uninstall:
 	rm -rf ../build*
+dist:
+	rm -rf ../Archive_SmartCalc_v1.0/
+	mkdir ../Archive_SmartCalc_v1.0/
+	mkdir ../Archive_SmartCalc_v1.0/src
+	cp ../build/Contents/MacOS/SmartCalc ../Archive_SmartCalc_v1.0/src/
+	cd .. && tar cvzf Archive_SmartCalc_v1.0.tgz ../Archive_SmartCalc_v1.0 && mv Archive_SmartCalc_v1.0 src/
+cl:
+	rm -rf ../Archive_SmartCalc_v1.0
 	
+bist:
+	rm -rf ../Archive_SmartCalc_v1.0/
+	mkdir ../Archive_SmartCalc_v1.0/
+	mkdir ../Archive_SmartCalc_v1.0/src
+	cp ../build/Contents/MacOS/SmartCalc ../Archive_SmartCalc_v1.0/src/
+	mv ../Archive_SmartCalc_v1.0/ .
+	tar cvzf Archive_SmartCalc_v1.0.tgz Archive_SmartCalc_v1.0
+	open .
 # test: 
 # 	@make clean
 # 	@gcc -g $(CFLAGS) $(MAIN) $(SRC) && ./a.out
